@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MR COMBAT</title>
+    <script src="./js/combat.js"></script>
+</head>
+<body>
+    <h1>Animal Combat ! 🔥💧🌱</h1>
+    <section id="seleccionar_mascota">
+        <h2>Elige a tu mascota: </h2>
+        <label for="fenixita">Fenixita</label>
+        <input type="radio" name="mascota" id="fenixita"/>
+        <label for="delfipower">Delfipower</label>
+        <input type="radio" name="mascota" id="delfipower"/>
+        <label for="topotaque">Topotaque</label>
+        <input type="radio" name="mascota" id="topotaque"/>
+        <label for="oxidianota">Oxidianota</label>
+        <input type="radio" name="mascota" id="oxidianota"/>
+        <label for="tortuninja">Tortuninja</label>
+        <input type="radio" name="mascota" id="tortuninja"/>
+        <label for="dragonburri">Dragonburri</label>
+        <input type="radio" name="mascota" id="dragonburri"/>
+
+
+        <button id="boton-mascotas">Seleccionar</button>
+    </section>
+    <section id="seleccionar_ataque">
+        <h2>Elige tu ataque: </h2>
+        <p>Tu mascota tiene <span>3</span> vidas</p>
+        <p>La mascota del enemigo tiene <span>3</span> vidas</p>
+        <p>
+            <button id="boton-fuego">Fuego 🔥</button>
+            <button id="boton-agua">Agua 💧</button>
+            <button id="boton-tierra">Tierra 🌱</button>
+        </p>
+    </section>
+    <section id="mensajes">
+        <p>Tu mascota atacó con <span>FUEGO</span>, la mascota de tu enemigo atacó con <span>TIERRA</span> - <span>GANASTE 🎉</span></p>
+    </section>
+    <section id="reiniciar">
+        <button id="boton-reiniciar">Reiniciar</button>
+    </section>
+</body>
+</html>

@@ -104,6 +104,16 @@ function ataqueAleatorioEnemigo() {
     else {
         ataqueEnemigo = "TIERRA"
     }
+    crearMensaje()
+}
+
+function crearMensaje() {
+    let sectionMensajes = document.getElementById("mensajes")
+    // createElement es otra manera de manejar el DOM, es decir desde Javascript estamos creando un parrafo en HTML
+    let parrafo = document.createElement("p")
+    parrafo.innerHTML = "Tu mascota atacó con " + ataqueJugador + " la mascota de tu enemigo atacó con " + ataqueEnemigo + "- GANASTE 🎉"
+    // como anteriormente creamos una variable la cual guarda el contenido del id dado, lo que hacemos con appendChild es insertar en esa seccion el parrafo que creamos
+    sectionMensajes.appendChild(parrafo)
 }
 
 function aleatorio(min, max) {

@@ -1,8 +1,20 @@
+// variable global la cual puede ser llamada por cualquier funcion
+// un beneficio de las variables globales es que podemos ver como cambia su contenido desde la consola
+let ataqueJugador 
+let ataqueEnemigo 
+
 function iniciarJuego() {
-    // variable que llama al elemento con la id(boton-mascotas) de html 
+    // variable que llama al elemento con la id de html
     let botonMascotaJugador = document.getElementById("boton-mascotas")
-// Escucha cuando se hace click al elemento que llamamos en la variable botonMascotaJugador anteriormente, y al escuchar esto tiene como segundo parametro una funcion en la cual luego escribiremos lo que queremos que pase luego de que se cumple la accion del "click"
-botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
+    // Escucha cuando se hace click al elemento que llamamos en la variable botonMascotaJugador anteriormente, y al escuchar esto tiene como segundo parametro una funcion en la cual luego escribiremos lo que queremos que pase luego de que se cumple la accion del "click"
+    botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
+
+    let botonFuego = document.getElementById("boton-fuego")
+    botonFuego.addEventListener("click", ataqueFuego)
+    let botonAgua = document.getElementById("boton-agua")
+    botonAgua.addEventListener("click", ataqueAgua)
+    let botonTierra = document.getElementById("boton-tierra")
+    botonTierra.addEventListener("click", ataqueTierra)
 }
 function seleccionarMascotaJugador()
 {
@@ -65,6 +77,35 @@ function seleccionarMascotaEnemigo() {
         spanMascotaEnemigo.innerHTML = "Dragonburri "
     }
 }
+function ataqueFuego() {
+    ataqueJugador = "FUEGO"
+    ataqueAleatorioEnemigo()
+    
+}
+function ataqueAgua() {
+    ataqueJugador = "AGUA"
+    ataqueAleatorioEnemigo()
+    
+}
+function ataqueTierra() {
+    ataqueJugador = "TIERRA"
+    ataqueAleatorioEnemigo()
+    
+    
+}
+function ataqueAleatorioEnemigo() {
+    let ataqueAleatorio = aleatorio(1, 3)
+    if (ataqueAleatorio == 1) {
+        ataqueEnemigo = "FUEGO"
+    }
+    else if (ataqueAleatorio== 2) {
+        ataqueEnemigo = "AGUA"
+    }
+    else {
+        ataqueEnemigo = "TIERRA"
+    }
+}
+
 function aleatorio(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
